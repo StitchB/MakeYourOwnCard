@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Pine Tree</string>
+    <string name="email_address">contact@pinetree.com</string>
+    <string name="phone_number">+48 900 000 000</string>
+    <string name="facebook">www.facebook.com/pinetree/</string>
+    <string name="twitter">www.twitter.com/pinetree/</string>
+    <string name="main_image">Main Image</string>
+    <string name="main_logo">Main Logo</string>
+    <string name="next_image">Next Image</string>
+    <string name="small_logo">Small Logo</string>
+    <string name="collapse_button">Collapse Button</string>
+    <string name="expand_button">Expand Button</string>
+</resources>

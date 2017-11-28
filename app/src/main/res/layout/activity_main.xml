@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchParent"
+    tools:context=".MainActivity">
+
+    <!-- Main Image -->
+    <ImageView
+        android:id="@+id/main_image"
+        android:contentDescription="@string/main_image"
+        style="@style/WrapContent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dog_1" />
+
+    <!-- Main Logo -->
+    <ImageView
+        android:id="@+id/main_logo"
+        android:contentDescription="@string/main_logo"
+        style="@style/WrapContent"
+        android:src="@drawable/main_logo"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="6dp"/>
+
+    <!-- Button for changing images in @id/main_image -->
+    <ImageButton
+        android:id="@+id/button_next"
+        android:contentDescription="@string/next_image"
+        style="@style/ActionButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/selector_next_button"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <!-- Expanded info container -->
+    <LinearLayout
+        android:id="@+id/expanded_container"
+        style="@style/ExpandCollapseContainer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <!-- Small logo with collapse button -->
+        <RelativeLayout
+            style="@style/WrapContent">
+
+            <!-- Small logo -->
+            <ImageView
+                android:id="@+id/small_logo"
+                android:contentDescription="@string/small_logo"
+                style="@style/WrapContent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/small_logo"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"/>
+
+            <!-- Collapse button -->
+            <ImageButton
+                android:id="@+id/button_collapse"
+                android:contentDescription="@string/collapse_button"
+                style="@style/ActionButton"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/selector_collapse_button"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="6dp" />
+
+        </RelativeLayout>
+
+        <!-- First line of contact details (email address & phone number) -->
+        <LinearLayout
+            android:id="@+id/contact_details_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- Email address text with an icon -->
+            <TextView
+                android:id="@+id/email_address"
+                android:drawableStart="@drawable/email_icon"
+                android:drawablePadding="8dp"
+                android:text="@string/email_address"
+                android:autoLink="email"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/palatino_linotype"
+                android:padding="4dp"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="11sp" />
+
+            <!-- Phone text with an icon -->
+            <TextView
+                android:id="@+id/phone_number"
+                android:drawableStart="@drawable/phone_icon"
+                android:drawablePadding="8dp"
+                android:text="@string/phone_number"
+                android:autoLink="phone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/palatino_linotype"
+                android:padding="4dp"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <!-- Second line of contact details (facebook & twitter) -->
+        <LinearLayout
+            android:id="@+id/contact_details_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- Facebook text with an icon -->
+            <TextView
+                android:id="@+id/facebook"
+                android:drawableStart="@drawable/facebook_icon"
+                android:drawablePadding="8dp"
+                android:text="@string/facebook"
+                android:autoLink="web"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/palatino_linotype"
+                android:padding="4dp"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="11sp" />
+
+            <!-- Twitter text with an icon -->
+            <TextView
+                android:id="@+id/twitter"
+                android:drawableStart="@drawable/twitter_icon"
+                android:drawablePadding="8dp"
+                android:text="@string/twitter"
+                android:autoLink="web"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/palatino_linotype"
+                android:padding="4dp"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Collapsed info container -->
+    <RelativeLayout
+        android:id="@+id/collapsed_container"
+        style="@style/ExpandCollapseContainer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+
+        <!-- Expand button -->
+        <ImageButton
+            android:id="@+id/button_expand"
+            android:contentDescription="@string/expand_button"
+            style="@style/ActionButton"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/selector_expand_button" />
+    </RelativeLayout>
+</RelativeLayout>
